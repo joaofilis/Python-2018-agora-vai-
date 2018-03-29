@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "22522f0a-5870-4357-8f53-111d7b63baf2",
+		"name": "socialfilm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review lucio sobre dr. strange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/reviews/tt0076759/lucio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"reviews",
+						"tt0076759",
+						"lucio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/reviews/tt0076759/jose",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"reviews",
+						"tt0076759",
+						"jose"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add review maria",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":\"excelente\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/reviews/tt0076759/maria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"reviews",
+						"tt0076759",
+						"maria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alter review lucio",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":\"nao gostei tanto\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/reviews/tt0076759/lucio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"reviews",
+						"tt0076759",
+						"lucio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add review invalida",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comentario\":\"excelente\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/reviews/tt0076759/maria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"reviews",
+						"tt0076759",
+						"maria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add review para filme invalido",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":\"excelente\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/reviews/naonao/maria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"reviews",
+						"naonao",
+						"maria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todas as reviews do Lucio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/reviews/all_films/lucio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"reviews",
+						"all_films",
+						"lucio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estrelas lucio sobre dr. strange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/stars/tt0076759/lucio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"stars",
+						"tt0076759",
+						"lucio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar estrelas",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"stars\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/stars/tt0076759/lucio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"stars",
+						"tt0076759",
+						"lucio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estrelas demais",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"stars\": 30\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/stars/tt0076759/lucio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"stars",
+						"tt0076759",
+						"lucio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estrelas json invalido",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"estrelas_mas_devia_ser_stars\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/stars/tt0076759/lucio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"stars",
+						"tt0076759",
+						"lucio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estrelas medias star wars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/stars/tt0076759/average",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"stars",
+						"tt0076759",
+						"average"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busca",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/search?buscar=star+wars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"search"
+					],
+					"query": [
+						{
+							"key": "buscar",
+							"value": "star+wars"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bestof",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/socialfilm/bestof/1977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"socialfilm",
+						"bestof",
+						"1977"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
